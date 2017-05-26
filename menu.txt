@@ -1,4 +1,0 @@
-Burger/4.25/650/M
-Salad/3.50/400/V
-Tuna Sandwich/3.75/550/D
-Yogurt/1.75/350/D
