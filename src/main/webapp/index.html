@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html ng-app='CodeBotApp'>
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="google-signin-scope" content="email">
+  <meta name="google-signin-client_id" content="516039612046-ugnjm36pasoqr6v63kjf8on71b23s7rs.apps.googleusercontent.com">
+
+  <title id="title">CodeBotApp</title>
+  <link href="flow.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/x-icon" href="java.ico" />
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-sanitize.min.js"></script>
+  <script src="spin.min.js"></script>
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <script src="controllers/main_controller.js" defer></script>
+</head>
+
+<body ng-controller="FrontCtrl as ctrl">
+
+
+    <div class="box header">
+
+      <h3>Java CodeRunner v1.0</h3>
+
+    </div>
+
+
+    <div class="userlogin">
+      <div id="unauthed">
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="light"></div>
+      </div>
+      <div id="nonfrisch">Error, log out of non-Frisch Google email</div>
+      <div id="authed"><div id="imgbox"></div>[Signed in]
+        <a href="#" ng-click="ctrl.signout()">Signout</a> -
+        <a href="grades.html">My progress</a> - <a href="#" ng-click="ctrl.goback()">Videos</a>
+      </div>
+    </div>
+
+
+    <div class="box sidebar">
+      <h3>Assignments</h3>
+      <div ng-repeat="tmp in ctrl.assignments">
+        <span><a href="#" ng-click="ctrl.switch(tmp.id)">{{tmp.name}}</a></span>
+        <br/><br/>
+      </div>
+    </div>
+
+    <div id="submitbox" class="box content">
+
+      <p ng-bind-html="ctrl.description"></p>
+      <div id="jobwindow">
+        <div id="editwindow">
+          Name of Java class: <input type="text" placeholder="Name of class" ng-model="ctrl.jobrequest.className"></input>
+         <br/>
+         <h3>Java Source Code:</h3>
+         <textarea placeholder="type your code here" rows="20" cols="80" ng-model="ctrl.jobrequest.text">
+         </textarea>
+        </div>
+
+        <div class="button-inner">
+         <button id="sbutton" class="ng-binding" ng-click="ctrl.submit()" >Submit</button>
+        </div>
+
+        <br/>
+        <u>Server Response:</u>
+        <br/>
+        <div id="progressbar"></div>
+           <pre style="font-size: 1.5vw;"><p ng-bind-html="ctrl.message"></p></pre>
+        <br/>
+      </div>
+    </div>
+
+
+    <div class="box footer" style="font-size: 1.0vw;">
+      (c) 2016 Luke Czapla, The Frisch School
+    </div>
+
+
+</body>
+
+</html>

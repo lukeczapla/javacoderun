@@ -1,0 +1,129 @@
+
+
+body,html {
+  height:100%;
+  max-height:100%;
+  overflow: hidden;
+  background-color: #000;
+  font-family: Roboto, sans-serif;
+  font-size: 1.25vw;
+}
+
+button {
+    background-color: #777777;
+    color: #FFFFFF;
+    padding: 0.5vw 1.5vw;
+    border: 2px solid #660000; /* Green */
+    border-radius: 2vw;
+    font-family: Arial, sans-serif;
+    font-size: 1vw;
+}
+button:hover {
+    background-color: #000000;
+}
+button:active {
+    background-color: #990000;
+}
+
+
+input {
+  font-size:1vw;
+  font-family: 'Andale Mono', AndaleMono, monospace;
+  display:block;
+  padding: 0.5%;
+  border: 0.1vw solid #765942;
+  border-radius: 10px;
+
+}
+
+textarea {
+	border: 2px solid #765942;
+	padding: 1%;
+	font-family: 'Andale Mono', AndaleMono, monospace;
+	font-size: 1vw;
+	border-radius: 0.2%;
+}
+
+a:link,a:visited,a:hover { color: #F00; }
+a:active { color: #FFF; }
+
+  #sbp {
+  //  visibility: hidden;
+    display: none;
+    font-size: 1%;
+  }
+
+//  #unauthed {
+//      position: fixed;
+//      right: 20%;
+//  }
+
+    .userlogin {
+        position: fixed;
+        top: 3%;
+        right: 0;
+        width: 35%; min-width: 35%; max-width: 35%;
+        height: 8%; min-height: 8%; max-width: 8%;
+        border-radius: 5%;
+    }
+
+    .sidebar {
+       width: 23%; height: 70%;
+       min-width: 23%; max-width: 23%;
+       min-height:70%; max-height:70%;
+       float: left;
+       overflow-y: scroll;
+    }
+
+    .content {
+       width: 73%; height: 65%;
+       min-width: 73%; max-width: 73%;
+       min-height: 70%; max-height:70%;
+//       word-break:break-all;
+       float: right;
+       overflow-y: scroll;
+       overflow-x: scroll;
+    }
+
+    .fullbody {
+      width: 98%; height: 70%;
+      min-width: 98%; max-width: 98%;
+      min-height 70%; max-height: 70%;
+      overflow-y: scroll;
+      overflow-x: scroll;
+    }
+
+    .header {
+        width: 98%; height: 15%;
+        min-width: 98%; max-width: 98%;
+        min-height: 15%; max-height: 15%;
+    }
+
+    .login {
+       position: fixed;
+       float: right; min-width:30%; max-width:30%;
+       min-height: 20%;  max-height:20%;
+    }
+
+    .footer {
+        position: fixed;
+        width: 97%; height: 3%;
+        min-width: 97%; max-width: 97%;
+        min-height: 3%; max-height: 3%;
+        bottom: 0;
+    }
+
+
+.box {
+  padding: 0.5%;
+  margin: 0.5%;
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 2vw;
+}
+
+.header,
+.footer {
+  background-color: #999;
+}

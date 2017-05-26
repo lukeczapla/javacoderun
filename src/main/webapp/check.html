@@ -1,0 +1,27 @@
+<html>
+
+<head>
+    <title>Check user source code</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+    <script src="check.js"></script>
+</head>
+<body>
+<div id="userlist"></div>
+<input type="submit" value="Get User IDs" onclick="listu()"/>
+<div id="assignmentlist"></div>
+<input type="submit" value="Get Assignment IDs" onclick="lista()"/>
+<p/>
+Find user by email: <input type="text" id="useremail"/><input type="submit" onclick="find()"/>
+<p/>
+User ID to check: <input type="text" id="userid"/>
+<p/>
+Assignment ID to check: <input type="text" id="assignmentid"/>
+<p/>
+<input type="submit" onclick="process()" value="List passed submissions"/>
+<input type="submit" onclick="processhighest()" value="Return only highest and latest"/>
+<input type="submit" onclick="processany()" value="Return any submission"/>
+<pre><div id="results"></div></pre>
+
+</body>
+
+</html>

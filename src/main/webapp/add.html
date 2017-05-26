@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta charset="UTF-8"/>
+  <title id="title">CodeBotApp Edit Assignments</title>
+
+  <link href="flow.css" rel="stylesheet"/>
+  <link rel="shortcut icon" type="image/x-icon" href="java.ico"/>
+
+</head>
+
+
+<body>
+
+
+<div class="box header" style="text-align: center;">
+
+  Assignment Selection:<br/>
+  <select id="values" style="font-size: 2vw;">
+  </select>
+  <button id="editbutton" onclick="editA()">Edit</button>
+  <button onclick="deleteA()">Delete</button>
+  <br>
+
+</div>
+
+
+
+<div class="box fullbody">
+
+<h1 id="titletext">Add an assignment:</h1>
+
+  <br/>
+
+  <input type="text" id="name" placeholder="name of assignment"/>
+  <br/><br/>
+  <h3>Code model:</h3>
+  <br/>
+  <textarea rows="10" cols="80" id="code"></textarea>
+  <br>
+  <h3>Description</h3>
+  <textarea class="htmltype" rows="10" cols="80" id="description"></textarea>
+  <br/>
+  <select id="typesel">
+    <option value=1>Code Test</option>
+    <option value=2>Output Test</option>
+    <option value=3>Runner Test</option>
+  </select>
+
+  <br/>
+  Class name: <input type="text" id="classname" placeholder="name of class"></input>
+  <br/>
+  Initial source code
+  <br/>
+  <textarea class="text" rows="10" cols="80" id="initialsource" placeholder="Source code"></textarea>
+  <br/>
+  Reference Output
+  <br/>
+  <textarea rows="10" cols="80" id="refoutput"></textarea>
+  <br/>
+  Program Input
+  <br/>
+  <textarea rows="10" cols="80" id="input"></textarea>
+  <br/>
+  Program Template
+  <br/>
+  <textarea rows="10" cols="80" id="template"></textarea>
+  <br/>
+<button onclick="submit()">Submit</button>
+
+</div>
+
+
+<!--<script src="tinymce/tinymce.min.js"></script>-->
+<script src="jquery.min.js"></script>
+<script src="addAssignment.js"></script>
+</body>
