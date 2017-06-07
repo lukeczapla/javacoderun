@@ -1,5 +1,6 @@
 package frisch.java.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
 import frisch.java.controller.JsonViews;
 
@@ -31,9 +32,10 @@ public class User implements IDable<Long> {
     @JsonView(value = {JsonViews.User.class})
     private String socialId;
 
-    @Column(name = "password", length = 255)
+    @Column(name = "password")
     private String password;
 
+    @JsonIgnore
     @Enumerated(EnumType.STRING)
     @Column(name = "role", length = 20, nullable = false)
     private Role role;

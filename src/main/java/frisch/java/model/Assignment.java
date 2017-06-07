@@ -2,6 +2,7 @@ package frisch.java.model;
 
 import com.fasterxml.jackson.annotation.JsonView;
 import frisch.java.controller.JsonViews;
+import org.apache.commons.codec.language.bm.Lang;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -61,9 +62,15 @@ public class Assignment implements IDable<Long> {
     @Column
     private String input;
 
+
     @JsonView(value = {JsonViews.Assignment.class})
     @Column
     private Date dueDate;
+
+    @Enumerated(EnumType.STRING)
+    @JsonView(value = {JsonViews.Assignment.class})
+    @Column(name = "language", length = 20)
+    private Language language;
 
 //    @Lob @Basic(fetch = FetchType.LAZY)
 //    byte[] image;
@@ -89,6 +96,7 @@ public class Assignment implements IDable<Long> {
     public String getClassName() { return className; }
     public String getInput() { return input; }
     public Date getDueDate() { return dueDate; }
+    public Language getLanguage() { return language; }
 
     public void setName(String s) { this.name = s; }
     public void setDescription(String s) { this.description = s; }
@@ -100,5 +108,6 @@ public class Assignment implements IDable<Long> {
     public void setTemplate(String s) { this.template = s; }
     public void setInput(String s) { this.input = s; }
     public void setDueDate(Date dueDate) { this.dueDate = dueDate; }
+    public void setLanguage(Language language) { this.language = language; }
 
 }
