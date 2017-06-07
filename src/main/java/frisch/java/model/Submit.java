@@ -17,9 +17,19 @@ public class Submit implements IDable<Long> {
     @JsonView(value = {JsonViews.Submit.class})
     private Long id;
 
-    @Column(nullable=false)
+ //   @Column(nullable=false)
+ //   @JsonView(value = {JsonViews.Submit.class})
+ //   private Long userId;
+
+
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="user_id", referencedColumnName = "id", columnDefinition = "bigint(20)")
+    private User user;
+
+    @Column(nullable = false)
     @JsonView(value = {JsonViews.Submit.class})
-    private Long userId;
+    private Long assignmentId;
+
 
     @Column(length=100)
     @JsonView(value = {JsonViews.Submit.class})
@@ -28,10 +38,6 @@ public class Submit implements IDable<Long> {
     @Column(columnDefinition = "TEXT", nullable=false, length=65536)
     @JsonView(value = {JsonViews.Submit.class})
     private String text;
-
-    @Column(nullable=false)
-    @JsonView(value = {JsonViews.Submit.class})
-    private Long assignmentId;
 
     @Column(nullable = false)
     @JsonView(value = {JsonViews.Submit.class})
@@ -55,7 +61,7 @@ public class Submit implements IDable<Long> {
         this.id = id;
     }
 
-    public Long getUserId() { return userId; }
+    public User getUser() { return user; }
     public String getClassName() { return className; }
     public String getText() { return text; }
     public Long getAssignmentId() { return assignmentId; }
@@ -65,7 +71,7 @@ public class Submit implements IDable<Long> {
 
 
     public void setClassName(String s) { this.className = s; }
-    public void setUserId(Long i) { this.userId = i; }
+    public void setUser(User i) { this.user = i; }
     public void setText(String s) { this.text = s; }
     public void setAssignmentId(Long a) { this.assignmentId = a; }
     public void setPassed(boolean value) { this.passed = value; }

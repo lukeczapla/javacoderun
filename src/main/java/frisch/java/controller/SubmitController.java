@@ -79,7 +79,7 @@ public class SubmitController {
             int score = ResultProcessor.compare(sub.getResponseText(), sub.getStandardText());
             String message = "<b>Code accepted and scored as " + score
                     + " out of 100</b><br/>" + sub.getResponseText();
-            code.setUserId(user.getId());
+            code.setUser(user);
             code.setScore(new Long(score));
             code.setDate(new Date());
             if (score >= 90) code.setPassed(true);
