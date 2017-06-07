@@ -4,6 +4,8 @@ import frisch.java.model.Assignment;
 import frisch.java.model.Submit;
 import frisch.java.util.InputProcessor;
 import frisch.java.util.SystemUtils;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.*;
@@ -16,6 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class Submission {
 
 //    private static String append_to_stream = "\nend of input from JavaCodeRun\nExtra\nExtra";
+    private static Logger log = LoggerFactory.getLogger(Submission.class);
 
     private String responseText;
     private String standardText;
@@ -28,7 +31,7 @@ public class Submission {
 
     public boolean execute(Submit job, Assignment assignment) throws FileNotFoundException, IOException {
 
-        System.out.println(job.getAssignmentId());
+        log.debug(""+job.getAssignmentId());
         responseText = "";
         standardText = "";
 
@@ -40,7 +43,7 @@ public class Submission {
         String path = "job" + jobid;
         String source = "job" + jobid + "/" + classname + ".java";
         String compiled = job.getClassName();
-        System.out.println(path + " " + source);
+        log.debug(path + " " + source);
 
         new File(path).mkdir();
         PrintWriter o = new PrintWriter(source);
@@ -60,7 +63,7 @@ public class Submission {
 
         InputStream is = compile.getInputStream();
         Scanner scan = new Scanner(is);
-        while (scan.hasNextLine()) System.out.println(scan.nextLine());
+        while (scan.hasNextLine()) log.debug(scan.nextLine());
 
         Process execute;
         BufferedWriter out;

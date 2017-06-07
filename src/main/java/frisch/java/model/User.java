@@ -38,6 +38,8 @@ public class User implements IDable<Long> {
     @Column(name = "role", length = 20, nullable = false)
     private Role role;
 
+    @JsonView(value = {JsonViews.User.class})
+    @Transient
     private String tokenId;
 
     @Override

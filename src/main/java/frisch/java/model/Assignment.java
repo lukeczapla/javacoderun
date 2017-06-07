@@ -55,15 +55,15 @@ public class Assignment implements IDable<Long> {
 
     @JsonView(value = {JsonViews.Assignment.class})
     @Column
-    String className;
+    private String className;
 
     @JsonView(value = {JsonViews.Assignment.class})
     @Column
-    String input;
+    private String input;
 
     @JsonView(value = {JsonViews.Assignment.class})
     @Column
-    Date dueDate;
+    private Date dueDate;
 
 //    @Lob @Basic(fetch = FetchType.LAZY)
 //    byte[] image;

@@ -9,6 +9,8 @@ import frisch.java.conf.GoogleProperties;
 import frisch.java.model.User;
 import frisch.java.service.CodeUserDetailsService;
 import frisch.java.service.UserService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -37,6 +39,8 @@ import java.util.Set;
 @RestController
 @Api("User login and registration")
 public class UserController {
+
+    private static Logger log = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     CodeUserDetailsService codeUserDetailsService;
@@ -77,7 +81,8 @@ public class UserController {
         GoogleIdTokenVerifier verifier = new GoogleIdTokenVerifier.Builder(new NetHttpTransport(), jacksonFactory)
                 .setAudience(Collections.singletonList(googleProperties.getClientId()))
                 .build();
-        System.out.println("Login Controller: " + user.getEmail());
+        log.info("Login Controller: " + user.getEmail());
+        log.info("Token ID: "  + user.getTokenId());
         GoogleIdToken idToken = verifier.verify(user.getTokenId());
         if (idToken == null) {
             return new ResponseEntity("Invalid token data", HttpStatus.BAD_REQUEST);
@@ -86,7 +91,7 @@ public class UserController {
             if (payload == null || !payload.getEmail().equals(user.getEmail())) {
                 return new ResponseEntity("Invalid email address", HttpStatus.BAD_REQUEST);
             }
-            System.out.println("Verified account");
+            log.info("Verified account");
         }
         if (codeUserDetailsService.loadUserByUsername(user.getEmail()) != null) {
 //            System.out.println("Authenticating");
@@ -128,7 +133,7 @@ public class UserController {
     public ResponseEntity test(Authentication authentication) {
 //        System.out.println(SecurityContextHolder.getContext().getAuthentication().isAuthenticated());
         if (SecurityContextHolder.getContext().getAuthentication().isAuthenticated()) {
-            System.out.println(SecurityContextHolder.getContext().getAuthentication().getPrincipal());
+            log.info(SecurityContextHolder.getContext().getAuthentication().getPrincipal().toString());
         }
 
         return new ResponseEntity("Ok", HttpStatus.OK);

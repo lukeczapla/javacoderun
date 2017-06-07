@@ -32,8 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     }
 
     public void configure(HttpSecurity http) throws Exception {
-        http.
-                sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.ALWAYS)
                 .and().csrf().disable().authorizeRequests()
                 .antMatchers(POST, "/conf/assignment").hasRole("ADMIN")
                 .antMatchers(PUT, "/conf/assignment").hasRole("ADMIN")
