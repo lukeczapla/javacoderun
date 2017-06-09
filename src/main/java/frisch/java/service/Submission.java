@@ -120,7 +120,10 @@ public class Submission {
                     return false;
                 }
             } catch (InterruptedException e) {
-
+                log.info(e.getMessage());
+                responseText = "An exception occurred in testing";
+                SystemUtils.deleteFolder(path);
+                return false;
             }
 
             // here we process the output.

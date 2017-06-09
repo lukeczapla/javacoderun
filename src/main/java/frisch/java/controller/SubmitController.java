@@ -47,6 +47,14 @@ public class SubmitController {
         return getByUser(user.getId());
     }
 
+    @ApiOperation("Get all submission records for a assignment")
+    @RequestMapping(value = "/conf/submit/assignment/{id}", method=RequestMethod.GET)
+    @JsonView(JsonViews.Submit.class)
+    public List<Submit> getByAssignment(@PathVariable("id") Long assignmentId) {
+        return submitService.getSubmitByAssignmentId(assignmentId);
+    }
+
+
     @ApiOperation("Get all submission records for a given user")
     @RequestMapping(value = "/conf/user/submissions/{id}", method=RequestMethod.GET)
     @JsonView(JsonViews.Submit.class)
@@ -65,7 +73,6 @@ public class SubmitController {
             return new ResponseEntity("No assignment listed", HttpStatus.NOT_ACCEPTABLE);
         Assignment assignment = assignmentService.getOne(code.getAssignmentId());
         Submission sub = new Submission();
-//        System.out.println(code.getClassName() + "\n" + code.getText());
         boolean success;
 
         try {

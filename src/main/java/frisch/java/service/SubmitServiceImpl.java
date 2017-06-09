@@ -20,6 +20,11 @@ public class SubmitServiceImpl extends AbstractService<Submit, Long> implements 
     private SubmitRepository submitRepository;
 
     @Override
+    public List<Submit> getSubmitByAssignmentId(Long assignmentId) {
+        return submitRepository.findByAssignmentId(assignmentId);
+    }
+
+    @Override
     public List<Submit> getSubmitByUserId(Long userId) {
         return submitRepository.findByUserId(userId);
     }

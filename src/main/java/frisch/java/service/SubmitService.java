@@ -10,5 +10,6 @@ import java.util.List;
 public interface SubmitService extends JpaService<Submit, Long> {
 
     List<Submit> getSubmitByUserId(Long userId);
+    List<Submit> getSubmitByAssignmentId(Long assignmentId);
 
 }

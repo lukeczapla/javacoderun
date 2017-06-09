@@ -47,7 +47,7 @@ public class Submit implements IDable<Long> {
     @JsonView(value = {JsonViews.Submit.class})
     private boolean passed;
 
-    @Column
+    @Column(nullable = false)
     @JsonView(value = {JsonViews.Submit.class})
     private Date date;
 

@@ -41,6 +41,7 @@ import java.util.Set;
 public class UserController {
 
     private static Logger log = LoggerFactory.getLogger(UserController.class);
+    private static final JacksonFactory jacksonFactory = new JacksonFactory();
 
     @Autowired
     CodeUserDetailsService codeUserDetailsService;
@@ -54,7 +55,7 @@ public class UserController {
     @Autowired
     GoogleProperties googleProperties;
 
-    private static final JacksonFactory jacksonFactory = new JacksonFactory();
+
 
     @RequestMapping(value = "/conf/userlist", method = RequestMethod.GET)
     @ApiOperation("Retrieve list of all registered users")
