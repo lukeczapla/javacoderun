@@ -10,6 +10,10 @@
 >
 > <p align="right">וַיִּטַּ֥ע  אֶ֖שֶׁל  בִּבְאֵ֣ר  שָׁ֑בַע  וַיִּ֨קְרָא־  שָׁ֔ם  בְּשֵׁ֥ם  יְהוָ֖ה  אֵ֥ל  עֹולָֽם׃</p>
 
+<p align="center">
+  <img src="https://github.com/marod424/tamarisk/blob/trunk/tamarisk_md.png" alt="Tamarisk tree" />
+</p>
+
 ## Objective
 Following the image of the tamarisk, the goal of the final project is to cultivate a pleasant space for the joy of future generations.
 The seed has already been planted. Our work is to prune, water, and grow what we’ve been given with patience, care, and teamwork.
