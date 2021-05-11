@@ -6,5 +6,3 @@ Administration functions are currently simple, and future iterations will improv
 Google is used for authentication, and the system does not use passwords.  
 A bitap algorithm is used for matching program output to expected results in one assignment mode, 
 and it helps to do incomplete matching and assign a score to the output using a Levenshtein distance.
-
-## Testing trunk protection
