@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost/tamariskdb
-    username: root
-    password: 011604Aaron
+    username: fillmein
+    password: fillmein
     driverClassName: com.mysql.jdbc.Driver
     continueOnError: true
     testOnBorrow: true
