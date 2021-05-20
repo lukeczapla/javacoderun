@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e249f284-98ee-480a-a634-04118e2b2c46" name="Default" comment="added fix to application.yml to allow it to work on macOS">
+    <list default="true" id="e249f284-98ee-480a-a634-04118e2b2c46" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,11 +40,11 @@
   <component name="GradleLocalSettings">
     <option name="modificationStamps">
       <map>
-        <entry key="$USER_HOME$/Documents/workspace/GluonMobile-MultiViewProjectwithFXML" value="1462915508000" />
-        <entry key="$USER_HOME$/Documents/workspace/GluonMobile-MultiViewProjectwithFXML10" value="1462916161000" />
-        <entry key="$USER_HOME$/Documents/workspace/GluonMobile-MultiViewProjectwithFXML2" value="1462913238000" />
-        <entry key="$USER_HOME$/Documents/workspace/GluonMobile-MultiViewProjectwithFXML3" value="1462914723000" />
-        <entry key="$USER_HOME$/Documents/workspace/GluonMobile-SingleViewProject" value="1462918116000" />
+        <entry key="$PROJECT_DIR$/../../workspace/GluonMobile-MultiViewProjectwithFXML" value="1462915508000" />
+        <entry key="$PROJECT_DIR$/../../workspace/GluonMobile-MultiViewProjectwithFXML10" value="1462916161000" />
+        <entry key="$PROJECT_DIR$/../../workspace/GluonMobile-MultiViewProjectwithFXML2" value="1462913238000" />
+        <entry key="$PROJECT_DIR$/../../workspace/GluonMobile-MultiViewProjectwithFXML3" value="1462914723000" />
+        <entry key="$PROJECT_DIR$/../../workspace/GluonMobile-SingleViewProject" value="1462918116000" />
         <entry key="$PROJECT_DIR$/../blog-social-login-with-spring-social-master" value="1464643859000" />
       </map>
     </option>
@@ -485,6 +486,8 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="application&#9;FILE&#9;file:///Users/luke/frisch/coderun/src/main/resources/application.yml" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -494,10 +497,11 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="C:\Users\marod\Projects\Frisch\APComputerScience\Tamarisk\src\main\resources" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -519,7 +523,6 @@
     </configuration>
     <configuration name="MyApp" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="frisch.java.coderun" />
       <module name="coderun" />
       <method v="2">
@@ -619,14 +622,6 @@
       <updated>1464738599834</updated>
       <workItem from="1466356537014" duration="116816000" />
     </task>
-    <task id="LOCAL-00001" summary="added fix to application.yml to allow it to work on macOS">
-      <created>1621451640751</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1621451640751</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -710,24 +705,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.facetType" implementationName="Python" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="Aaronthetechguy" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -742,13 +728,12 @@
       <collection />
     </option>
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="added fix to application.yml to allow it to work on macOS" />
-    <option name="LAST_COMMIT_MESSAGE" value="added fix to application.yml to allow it to work on macOS" />
-  </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/tamarisk$MyApp.ic" NAME="MyApp Coverage Results" MODIFIED="1620747092914" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/frisch/java/repository/UserRepository.java">
