@@ -1,3 +1,4 @@
+
 # TAMARISK
 
 > The tamarisk tree is often planted, particularly in the desert.
@@ -10,9 +11,6 @@
 >
 > <p align="right">וַיִּטַּ֥ע  אֶ֖שֶׁל  בִּבְאֵ֣ר  שָׁ֑בַע  וַיִּ֨קְרָא־  שָׁ֔ם  בְּשֵׁ֥ם  יְהוָ֖ה  אֵ֥ל  עֹולָֽם׃</p>
 
-<p align="center">
-  <img src="https://github.com/marod424/tamarisk/blob/trunk/tamarisk_md.png" alt="Tamarisk tree" />
-</p>
 
 ## Objective
 Following the image of the tamarisk, the goal of the final project is to cultivate a pleasant space for the joy of future generations.
@@ -39,4 +37,3 @@ How can you contribute? That depends on what you believe the application could u
 Documentation, product design, product management, code clean up, new features, bug fixes, enhancements, UI, etc.
 
 There is plenty to do. More to come...
-
