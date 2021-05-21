@@ -10,7 +10,7 @@
 > How many tamarisk trees did you plant today?
 >
 > <p align="right">וַיִּטַּ֥ע  אֶ֖שֶׁל  בִּבְאֵ֣ר  שָׁ֑בַע  וַיִּ֨קְרָא־  שָׁ֔ם  בְּשֵׁ֥ם  יְהוָ֖ה  אֵ֥ל  עֹולָֽם׃</p>
-![Tamarisk](https://github.com/lukeczapla/javacoderun/blob/master/tamarisk_md.png)
+<span style="display:block;text-align:center">![Tamarisk](https://github.com/lukeczapla/javacoderun/blob/master/tamarisk_md.png)</span>
 
 ## Objective
 Following the image of the tamarisk, the goal of the final project is to cultivate a pleasant space for the joy of future generations.
