@@ -37,3 +37,5 @@ How can you contribute? That depends on what you believe the application could u
 Documentation, product design, product management, code clean up, new features, bug fixes, enhancements, UI, etc.
 
 There is plenty to do. More to come...
+
+Doc's suggestions: switch from old outdated AngularJS version to a React frontend (use cool react-bootstrap components), replace MySQL with MongoDB, build out monitoring tools.
